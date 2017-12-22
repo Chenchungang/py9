@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# 在用户管理功能中添加密码信息:
+#	增、改添加用户密码输入                 ##  这里修改题义为(添加add/修改update/删除delete时，增加密码输入认证信息)
+#	显示时将用户密码显示为N(密码长度)个*   ##  输入密码时将用户密码显示为N个*，不能显示出密码字符
+#	用户验证修改为用户名和密码
+#
+#	输入list后提示用户排序字段（name, age, tel），根据用户输入字段进行排序（升序）后将结果输入
+
+
+
 import sys, tty, termios
 
 #for python 3.x
@@ -32,7 +41,7 @@ def getpass(maskchar = "*"):
       password += ch
 
 
-def pt():
+def pt():                                      ## 打印函数
     print("用户名:{}".format(i, ))
     print("年龄:{}".format(k[0]))
     print("联系方式:{}".format(k[1]))
@@ -90,7 +99,7 @@ while True:
                     print("不能修改该用户,该用户已存在!")  
 
             else:
-                print("验证失败，无法添加新用户！")
+                print("验证失败,无法添加新用户!")
         else:
             print("无此用户!")
 
